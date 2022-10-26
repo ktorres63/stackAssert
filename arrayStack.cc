@@ -51,5 +51,22 @@ T ArrayStack<T>::pop1(){
 }
 template<typename T>
 int ArrayStack<T>::tamOcup(){
-	return
+	int tam =(sp-1);
+	return tam;
+}
+
+template<typename T>
+void ArrayStack<T>::printStack(){
+	assert(data<sp);
+	T *pointer;
+	pointer = data;
+	for(int i =0; i < (sp-1);i++){
+		std::cout << *(pointer+i) << ", ";
+	}
+/* Otra forma
+	for (auto val: data){
+		std::cout << val << ", ";
+	}
+*/
+	std::cout << "\n";
 }

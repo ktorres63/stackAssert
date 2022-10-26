@@ -20,8 +20,8 @@ class ArrayStack: public Stack<T>{
 		bool empty();
 		T pop1();
 		int tamOcup(); //tamaño ocupado del arreglo
-		virtual void print(ostream &os);
-
+//		void print(std::ostream &os);
+		void printStack();
 		
 };
 #endif
