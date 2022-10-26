@@ -2,6 +2,7 @@
 #define ARRAY_STACK_H
 #include "stack.h"
 #define FACTOR 10
+#include <iostream>
 
 template<typename T>
 class ArrayStack: public Stack<T>{
@@ -18,6 +19,8 @@ class ArrayStack: public Stack<T>{
 		T top();
 		bool empty();
 		T pop1();
+		int tamOcup(); //tamaño ocupado del arreglo
+		virtual void print(ostream &os);
 
 		
 };

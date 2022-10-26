@@ -15,18 +15,6 @@ void ArrayStack<T>::push(T e){
 
 }
 template<typename T>
-void ArrayStack<T>::pop(){
-	assert(sp>0);
-	if(empty())
-		return;
-	sp--;
-}
-template<typename T>
-T ArrayStack<T>::top(){
-	assert(!empty());
-	return *(sp-1);
-}
-template<typename T>
 bool ArrayStack<T>::empty(){
 	return sp==data;
 }
@@ -41,10 +29,27 @@ void ArrayStack<T>::resize(){
 	delete[] data;
 	data = newData;
 }
+template<typename T>
+T ArrayStack<T>::top(){
+	assert(!empty());
+	return *(sp-1);
+}
+
+template<typename T>
+void ArrayStack<T>::pop(){
+	assert(sp>0);
+	if(empty())
+		return;
+	sp--;
+}
 
 template<typename T>
 T ArrayStack<T>::pop1(){
 	assert(!empty());
-
-
+	sp--;
+	return *(sp);
+}
+template<typename T>
+int ArrayStack<T>::tamOcup(){
+	return
 }
