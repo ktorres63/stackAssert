@@ -4,11 +4,14 @@
 List::List(){
   head = nullptr;
   last = nullptr;
+  tam = 0;
 }
 List* List::append(int e){
   Node *n =new Node;
   n->data = e;
   n->next = nullptr;
+
+  tam++;
 
   if(head == nullptr){
     head = n;
@@ -22,23 +25,20 @@ List* List::append(int e){
 }
 int List::headA() {
   return head->data; }
+
+//TODO
 int List::size() {
-  int c = 0;
-  Node *iter = last;
-  while (iter) {
-    iter = iter->next;
-    if (iter == last)
-      iter = nullptr;
-    c++;
-  }
-  return c;
+  return tam;
 }
+
+
 
 int main(){
   List* a = new List();
 
   a->append(1);
   a->append(2);
+  a->append(33);
 
   int val= a->headA();
   int val2 = a->head->next->data;
@@ -46,6 +46,6 @@ int main(){
 
   std::cout << val << "\n";
   std::cout << val2 << "\n";
-  std::cout << val3 << "\n";
+  std::cout << a->size() << "\n";
 
 }

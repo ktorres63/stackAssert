@@ -11,6 +11,7 @@ class List {
   public: //private
     Node* head;
     Node* last;
+    int tam;
 
   public:
     List();
