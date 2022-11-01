@@ -1,13 +1,17 @@
 #include <assert.h>
 #include <iostream>
 #include "arrayStack.h"
+#include "stack.h"
+
 template<typename T>
 void ArrayStack<T>::push(T e){
 	assert(data<sp); //si es false se cumple assert
 					 //data siempre debe estar en pos 0
+
 	int numElem = sp -data;
 	if(size == numElem){
 		//TODO
+		//assert(size>numElem)  // si no hubiese resize
 		resize();
 	}
 	*sp = e;
@@ -20,6 +24,7 @@ bool ArrayStack<T>::empty(){
 }
 template<typename T>
 void ArrayStack<T>::resize(){
+	assert(size > 0);
 	T newData[] = new T[size+FACTOR];
 	for(int i = 0; i < size; i++){
 		newData[i] = data[i];
@@ -69,4 +74,9 @@ void ArrayStack<T>::printStack(){
 	}
 */
 	std::cout << "\n";
+}
+int main(){
+	Stack<int> *ptr = new ArrayStack<int>;
+	std::cout << "hola\n";
+	return 0;
 }
