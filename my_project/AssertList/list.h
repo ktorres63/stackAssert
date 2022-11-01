@@ -8,7 +8,7 @@ class Node {
 };
 
 class List {
-  private:
+  public: //private
     Node* head;
     Node* last;
 
