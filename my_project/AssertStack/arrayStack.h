@@ -21,7 +21,6 @@ public:
   bool empty();
   //---------------//
   T pop1();
-  int tamOcup(); // tamaño ocupado del arreglo
   //void print(std::ostream &os);
   void printStack();
 };

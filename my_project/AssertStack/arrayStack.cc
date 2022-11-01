@@ -10,7 +10,6 @@ void ArrayStack<T>::push(T e) {
 
   int numElem = sp - data;
   if (size == numElem) {
-	// TODO
 	// assert(size>numElem)  // si no hubiese resize
 	resize();
   }
@@ -19,13 +18,15 @@ void ArrayStack<T>::push(T e) {
 
 }
 
-template <typename T> void ArrayStack<T>::pop() {
+template <typename T>
+void ArrayStack<T>::pop() {
   // assert(sp>0);
   if (empty())
 	return;
   sp--;
 }
-template <typename T> T ArrayStack<T>::top() {
+template <typename T>
+T ArrayStack<T>::top() {
   assert(!empty());
   return *(sp - 1);
 }
@@ -34,8 +35,6 @@ template <typename T>
 bool ArrayStack<T>::empty() {
   return sp == data;
 }
-
-
 
 template <typename T>
 void ArrayStack<T>::resize() {
@@ -49,18 +48,21 @@ void ArrayStack<T>::resize() {
   delete[] data;
   data = newData;
 }
-template <typename T> T ArrayStack<T>::pop1() {
+//-------------------------------------//
+template <typename T>
+T ArrayStack<T>::pop1() {
   assert(!empty());
   sp--;
   return *(sp);
 }
 
-template <typename T> int ArrayStack<T>::tamOcup() {
-  // int tam =(sp-1);
-  //	return tam;
-}
+template <typename T>
+void ArrayStack<T>::printStack() {
 
-template <typename T> void ArrayStack<T>::printStack() {
+  for (int i = 0; i < size; i++) {
+    std::cout << data[i] << ", ";
+  }
+
   //	assert(data<sp);
   /*
 		  T *pointer;
@@ -79,7 +81,7 @@ int main() {
   ptr->push(1);
   ptr->push(22);
 
-  ArrayStack<int> *a = new ArrayStack<int>(22);
+  ArrayStack<int> *a = new ArrayStack<int>(10);
 
   a->push(11);
   a->push(199);
@@ -89,6 +91,7 @@ int main() {
   std::cout << valu << "\n";
 
   std::cout << "is empty? " << a->empty() << "\n";
+  a->printStack();
 
   return 0;
 }
