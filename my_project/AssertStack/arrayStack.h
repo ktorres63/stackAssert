@@ -7,7 +7,7 @@
 template<typename T>
 class ArrayStack: public Stack<T>{
 	private:
-		T data[];
+		T *data; // T data[]
 		int size; //memory size
 		T* sp; // stack pointer
 		void resize();

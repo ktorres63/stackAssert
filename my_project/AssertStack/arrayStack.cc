@@ -5,7 +5,7 @@
 
 template<typename T>
 void ArrayStack<T>::push(T e){
-	assert(data<sp); //si es false se cumple assert
+	//assert(data<sp); //si es false se cumple assert
 					 //data siempre debe estar en pos 0
 
 	int numElem = sp -data;
@@ -24,8 +24,8 @@ bool ArrayStack<T>::empty(){
 }
 template<typename T>
 void ArrayStack<T>::resize(){
-	assert(size > 0);
-	T newData[] = new T[size+FACTOR];
+	//assert(size > 0);
+	T *newData = new T[size+FACTOR]; //TODO
 	for(int i = 0; i < size; i++){
 		newData[i] = data[i];
 	}
@@ -42,7 +42,7 @@ T ArrayStack<T>::top(){
 
 template<typename T>
 void ArrayStack<T>::pop(){
-	assert(sp>0);
+	//assert(sp>0);
 	if(empty())
 		return;
 	sp--;
@@ -75,8 +75,12 @@ void ArrayStack<T>::printStack(){
 */
 	std::cout << "\n";
 }
+
 int main(){
-	Stack<int> *ptr = new ArrayStack<int>;
+	Stack<int> *ptr = new ArrayStack<int>(11);
+	ptr->push(1);
+	ptr->push(22);
+
 	std::cout << "hola\n";
 	return 0;
 }
