@@ -6,5 +6,5 @@ TEST(HelloTest, BasicAssertions) {
   // Expect two strings not to be equal.
   //EXPECT_STRNE("hello", "hello");
   // Expect equality.
-  EXPECT_EQ(sum(1,2), 5);
+  EXPECT_EQ(sum(1,2), 3);
 }

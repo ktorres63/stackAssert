@@ -13,6 +13,8 @@ prueba.cc
 /home/karlo/Escritorio/TO/stack/my_project/prueba.cc
 
 /home/karlo/Escritorio/TO/stack/my_project/prueba.cc
+assert.h
+-
 
 _deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h
 memory
