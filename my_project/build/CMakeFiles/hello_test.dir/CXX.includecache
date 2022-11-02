@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/home/karlo/Escritorio/TO/stack/my_project/AssertList/list.cc
+list.h
+/home/karlo/Escritorio/TO/stack/my_project/AssertList/list.h
+iostream
+-
+assert.h
+-
+
+/home/karlo/Escritorio/TO/stack/my_project/AssertList/list.h
+
 /home/karlo/Escritorio/TO/stack/my_project/AssertStack/arrayStack.cc
 arrayStack.h
 /home/karlo/Escritorio/TO/stack/my_project/AssertStack/arrayStack.h
@@ -27,10 +37,14 @@ iostream
 /home/karlo/Escritorio/TO/stack/my_project/hello_test.cc
 gtest/gtest.h
 -
+AssertList/list.h
+/home/karlo/Escritorio/TO/stack/my_project/AssertList/list.h
 AssertStack/arrayStack.cc
 /home/karlo/Escritorio/TO/stack/my_project/AssertStack/arrayStack.cc
 AssertStack/arrayStack.h
 /home/karlo/Escritorio/TO/stack/my_project/AssertStack/arrayStack.h
+AssertList/list.cc
+/home/karlo/Escritorio/TO/stack/my_project/AssertList/list.cc
 
 _deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h
 memory
