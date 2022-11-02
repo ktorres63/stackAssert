@@ -26,7 +26,9 @@ void ArrayStack<T>::pop() {
 template <typename T>
 T ArrayStack<T>::top() {
   assert(!empty());
-  return *(sp - 1);
+  T top = *(sp -1);
+  assert(top != *sp);
+  return top;
 }
 
 template <typename T>
@@ -37,7 +39,8 @@ bool ArrayStack<T>::empty() {
 
 template <typename T>
 void ArrayStack<T>::resize() {
-  assert(size > 0);
+
+  assert((size + FACTOR) > sp-data);
   T *newData = new T[size + FACTOR]; // newData[]
   for (int i = 0; i < size; i++) {
     newData[i] = data[i];
@@ -57,7 +60,6 @@ T ArrayStack<T>::pop1() {
 
 template <typename T>
 void ArrayStack<T>::printStack() {
-  //assert(data<sp);
   for (int i=0; i< sizeOc(); i++){
     std:: cout << data[i] << ", ";
   }
