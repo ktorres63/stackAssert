@@ -34,11 +34,12 @@ int List::append(int pos,int e){
   //tam++;
 
   Node *resc = head;
-  for(int i=0;i < pos ; i++){
+  for(int i=0;i < pos-1 ; i++){
 
-    resc = resc->next;
     lp=lp->next;
+    resc = resc->next;
   }
+  resc=resc->next;
   lp->next=n;
   n->next=resc;
 
@@ -68,7 +69,9 @@ int main(){
   a->append(33);
   a->append(4);
 
-  std::cout << a->append(1,2)<< "\n";
+  std::cout << a->append(1,99)<< "\n";
+  std::cout << a->get(1) << "\n";
+  std::cout << a->size() << "\n";
 
 
 }
