@@ -21,5 +21,7 @@ class List {
     int get(int );
     bool isEmpty();
     int size();
+    void print();
+
 };
 #endif
