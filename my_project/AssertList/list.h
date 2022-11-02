@@ -15,9 +15,9 @@ class List {
 
   public:
     List();
-    List *append(int e);
-    List *append(int i,int e);
-    int get(int i);
+    List *append(int );
+    List *append(int,int);
+    int get(int );
     bool isEmpty();
     int size();
 };
