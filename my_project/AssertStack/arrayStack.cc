@@ -66,11 +66,9 @@ void ArrayStack<T>::printStack() {
 
 }
 template <typename T>
+
 int ArrayStack<T>::sizeOc(){
-  int a=0;
-  while(data[a] != *(sp))
-    a++;
-  return a;
+  return sp -data;
 }
 int main() {
   Stack<int> *ptr = new ArrayStack<int>(11);
@@ -88,6 +86,7 @@ int main() {
 
   std::cout << "is empty? " << a->empty() << "\n";
   a->printStack();
+  std::cout << a->sizeOc() << "\n";
   std::cout << a->sizeOc() << "\n";
 
   return 0;
