@@ -8,7 +8,7 @@ class Node {
 };
 
 class List {
-  public: //TODO private
+  private: //TODO private
     Node* head;
     Node* last;
     int tam;
@@ -16,12 +16,11 @@ class List {
   public:
     List();
     List *append(int );
-//    int append(int,int);
     List *append(int,int);
     int get(int );
     bool isEmpty();
     int size();
-    void print();
+    void print(); //borrar
 
 };
 #endif
