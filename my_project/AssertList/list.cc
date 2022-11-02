@@ -26,24 +26,29 @@ bool List::isEmpty(){
   return tam==0;
 }
 //TODO
-int List::append(int pos,int e){
+List* List::append(int pos,int e){
   Node *lp =head;
-  Node *resc = head;
+  Node *resc;
 
+  Node *n= new Node();
+  n->data=e;
+
+  if(pos==0){
+    n->next=lp;
+    head=n;
+  }
+
+  else{
   for(int i=0;i < pos-1 ; i++){ // si pos =0 no funciona
     lp=lp->next;
-    resc = lp;
   }
-  resc =resc->next;
+  resc = lp->next;
 
-  lp=lp->next;
-  lp->data =e;
-
-  lp->next=resc;
-
+  lp->next=n;
+  n->next=resc;
+  }
   tam++;
-
-  return lp->data;
+  return this;
 }
 
 int List::get(int pos) {
@@ -75,10 +80,10 @@ int main(){
   a->append(21);
   a->append(33);
   a->append(84);
-  //a->append(1,99);
+  //a->append(1,39);
 
-  //std::cout << a->append(1,99)<< "\n";
-  std::cout << a->get(3) << "\n";
+//  std::cout << a->append(0,99)<< "\n";
+  std::cout << a->head->data << "\n";
   std::cout << "size: " << a->size() << "\n";
   a->print();
 
