@@ -23,5 +23,7 @@ public:
   T pop1();
   //void print(std::ostream &os);
   void printStack();
+  int sizeOc();
+
 };
 #endif

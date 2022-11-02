@@ -58,16 +58,20 @@ T ArrayStack<T>::pop1() {
 
 template <typename T>
 void ArrayStack<T>::printStack() {
-  int i=0;
-  while(data[i] != *(sp)){
-    std::cout << data[i] << ", ";
-    i++;
+  //assert(data<sp);
+  for (int i=0; i< sizeOc(); i++){
+    std:: cout << data[i] << ", ";
   }
   std::cout << "\n";
-  //assert(data<sp);
 
 }
-
+template <typename T>
+int ArrayStack<T>::sizeOc(){
+  int a=0;
+  while(data[a] != *(sp))
+    a++;
+  return a;
+}
 int main() {
   Stack<int> *ptr = new ArrayStack<int>(11);
   ptr->push(1);
@@ -84,6 +88,7 @@ int main() {
 
   std::cout << "is empty? " << a->empty() << "\n";
   a->printStack();
+  std::cout << a->sizeOc() << "\n";
 
   return 0;
 }
