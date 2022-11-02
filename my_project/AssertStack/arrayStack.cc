@@ -5,10 +5,10 @@
 
 template <typename T>
 void ArrayStack<T>::push(T e) {
-
   int numElem = sp - data;
-  if (size == numElem) {
+
 // assert(size>numElem)  // si no hubiese resize
+  if (size == numElem) {
     resize();
   }
   *sp = e;
@@ -16,7 +16,9 @@ void ArrayStack<T>::push(T e) {
 }
 template <typename T>
 void ArrayStack<T>::pop() {
-  // assert(sp>0);
+  int nelem= sp-data;
+  assert(nelem < 0);
+
   if (empty())
     return;
   sp--;
@@ -29,7 +31,7 @@ T ArrayStack<T>::top() {
 
 template <typename T>
 bool ArrayStack<T>::empty() {
-  assert((sp-data)>0);
+  int nelem=sp-data;
   return sp == data;
 }
 
@@ -65,7 +67,10 @@ void ArrayStack<T>::printStack() {
 template <typename T>
 
 int ArrayStack<T>::sizeOc(){
-  return sp -data;
+  int nelem= sp-data;
+  assert(nelem < 0);
+
+  return nelem;
 }
 int main() {
   Stack<int> *ptr = new ArrayStack<int>(11);
