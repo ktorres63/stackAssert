@@ -10,9 +10,7 @@ List* List::append(int e){
   Node *n =new Node;
   n->data = e;
   n->next = nullptr;
-
   tam++;
-
   if(head == nullptr){
     head = n;
     last =n;
@@ -23,15 +21,27 @@ List* List::append(int e){
   }
   return this;
 }
-int List::headA() {
-  return head->data; }
-
+bool List::isEmpty(){
+  return tam==0;
+}
 //TODO
+List* List::append(int i,int e){
+
+  return this;
+}
+
+int List::get(int pos) {
+  Node *tmp = new Node;
+  tmp = head;
+  for(int i=0;i < pos;i++){
+    tmp=tmp->next;
+  }
+  return tmp->data;
+}
+
 int List::size() {
   return tam;
 }
-
-
 
 int main(){
   List* a = new List();
@@ -40,12 +50,7 @@ int main(){
   a->append(2);
   a->append(33);
 
-  int val= a->headA();
-  int val2 = a->head->next->data;
-  int val3 = a->last->data;
-
-  std::cout << val << "\n";
-  std::cout << val2 << "\n";
-  std::cout << a->size() << "\n";
+  std::cout << "is empty? " << a->isEmpty()<< "\n";
+  std::cout << a->get(0)<< "\n";
 
 }
