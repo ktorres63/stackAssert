@@ -1,7 +1,7 @@
 HelloTest.BasicAssertions 1 0.00680814
 ABC.Assertions 3 0.00110901
 AzzxC.Assertions 2 0.001384
-Stack.Assertions 9 0.000268275
-List.Assertions 8 0.000265867
-ArrayStack.Assertions 7 0.000321512
+Stack.Assertions 18 0.000887478
+List.Assertions 17 0.000870169
+ArrayStack.Assertions 10 0.00161494
 ---
