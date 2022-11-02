@@ -58,37 +58,14 @@ T ArrayStack<T>::pop1() {
 
 template <typename T>
 void ArrayStack<T>::printStack() {
-  /*
-  for (int i = 0; i < size; i++) {
-    std::cout << data[i] << ", ";
-  }
-  */
-  //std::cout << *(data+1) << "\n";
-  std::cout << *(sp-1) << "\n";
-
-   //std::cout << *(pointer) << "\n";
-
   int i=0;
   while(data[i] != *(sp)){
     std::cout << data[i] << ", ";
     i++;
   }
-
-
-  //	assert(data<sp);
-  /*
-		  T *pointer;
-		  pointer = data;
-
-
-		  int a = (sp-1)+0;
-
-		  for(int i =0; i < (sp-1);i++){
-				  std::cout << *(pointer+i) << ", ";
-		  }
-  */
-
   std::cout << "\n";
+  //assert(data<sp);
+
 }
 
 int main() {
