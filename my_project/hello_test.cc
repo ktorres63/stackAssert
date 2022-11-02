@@ -10,6 +10,8 @@ TEST(Stack, Assertions) {
   EXPECT_TRUE(p->empty());
   p->push(1);
   p->push(12);
+  EXPECT_FALSE(p->empty());
+
 
 }
 
@@ -22,6 +24,7 @@ TEST(ArrayStack, Assertions) {
   EXPECT_FALSE(p->empty());
   EXPECT_EQ(p->pop1(),9);
   EXPECT_NE(p->top(),9);
+  EXPECT_TRUE(p->sizeOc()<9);
 
 
 }

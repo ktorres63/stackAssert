@@ -70,25 +70,7 @@ template <typename T>
 
 int ArrayStack<T>::sizeOc(){
   int nelem= sp-data;
-  assert(nelem < 0);
+  assert(nelem > 0);
 
   return nelem;
 }
-/*
-int main() {
-  Stack<int> *ptr = new ArrayStack<int>(11);
-  ptr->push(1);
-  ptr->push(22);
-
-  ArrayStack<int> *a = new ArrayStack<int>(10);
-  a->push(11);
-  a->push(199);
-  a->push(1);
-  std::cout << "is empty? " << a->empty() << "\n";
-  a->printStack();
-  std::cout << a->sizeOc() << "\n";
-  std::cout << a->sizeOc() << "\n";
-
-  return 0;
-}
-*/

@@ -78,20 +78,3 @@ void List::print(){
   }
   std::cout << "\n";
 }
-/*
-int main(){
-  List* a = new List();
-
-  a->append(1);
-  //99
-  a->append(21);
-  a->append(33);
-  a->append(84);
-  a->append(0,39);
-
-  std::cout << a->get(11)<< "\n";
-
-  std::cout << "size: " << a->size() << "\n";
-  a->print();
-}
-*/
