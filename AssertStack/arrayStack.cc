@@ -74,13 +74,13 @@ int ArrayStack<T>::sizeOc(){
 
   return nelem;
 }
+/*
 int main() {
   Stack<int> *ptr = new ArrayStack<int>(11);
   ptr->push(1);
   ptr->push(22);
 
   ArrayStack<int> *a = new ArrayStack<int>(10);
-
   a->push(11);
   a->push(199);
   a->push(1);
@@ -91,3 +91,4 @@ int main() {
 
   return 0;
 }
+*/
